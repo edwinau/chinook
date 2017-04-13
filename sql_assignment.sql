@@ -20,5 +20,6 @@
 
 -- 4) Find the all the artists whose names start with A.
 - SELECT name FROM artists WHERE name ILIKE 'A%';
+
 -- 5) Find all the tracks that belong to playlist 1.
-- SELECT name from tracks WHERE playlists_id = '1';
+- SELECT COUNT(track_id) FROM playlists_tracks WHERE playlist_id = '1'
