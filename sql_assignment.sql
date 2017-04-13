@@ -6,21 +6,19 @@
 
 -- 1) Find the albums recorded by the artist Queen.
 - SELECT id FROM artists WHERE name = 'Queen';
-- SELECT title FROM albums WHERE artist_id = x;
+- SELECT title FROM albums WHERE artist_id = 51;
 
 
 
 -- 2) [Count](http://www.w3schools.com/sql/sql_func_count.asp) how many tracks belong to the media type "Protected MPEG-4 video file".
 - SELECT id FROM media_types WHERE name = 'Protected MPEG-4 video file';
-- SELECT COUNT (*) WHERE media_types_id = x;
+- SELECT COUNT (*) FROM media_types WHERE id = 3;
 
 
 -- 3) Find the least expensive track that has the genre "Electronica/Dance".
-- SELECT id FROM tracks WHERE unit_price ORDER BY asc LIMIT 1;
-- SELECT "Electronica/Dance" from genres WHERE tracks_id = x;
+- SELECT MIN(unit_price) from tracks WHERE genre_id = 15;
 
 -- 4) Find the all the artists whose names start with A.
-- SELECT names FROM artists WHERE ILIKE 'A%';
-
+- SELECT name FROM artists WHERE name ILIKE 'A%';
 -- 5) Find all the tracks that belong to playlist 1.
 - SELECT name from tracks WHERE playlists_id = '1';
