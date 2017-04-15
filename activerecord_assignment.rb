@@ -17,6 +17,8 @@ Track.includes("Hip Hop/Rap").count
 Track.sum("milliseconds")
 
 # 3a) Find the highest price of any track that has the media type "MPEG audio file".
+- Track.find_by("media_types" "MPEG_audio_file")
+- Track.max( "MPEG audio file")
 
 
 
